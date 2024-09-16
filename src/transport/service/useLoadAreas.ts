@@ -1,21 +1,16 @@
-import { transport } from "../transport";
-import { useQuery } from "react-query";
+import { transport } from '../transport';
+import { useQuery } from 'react-query';
 
 export const useLoadAreas = () => {
+  const loadMeters = () => transport.listAreas();
 
-  const loadMeters = () => transport.listAreas()
-
-  const {data, isLoading, refetch} = useQuery(
-    "areas",
-    loadMeters,
-    {
-      keepPreviousData: true
-    }
-  );
+  const { data, isLoading, refetch } = useQuery('areas', loadMeters, {
+    keepPreviousData: true,
+  });
 
   return {
     areasList: data?.data,
     refetch,
-    isLoading
-  }
-}
+    isLoading,
+  };
+};

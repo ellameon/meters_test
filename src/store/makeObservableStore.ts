@@ -1,5 +1,5 @@
-import { observable } from "mobx"
+import { observable } from 'mobx';
 
 export function makeObservableStore<T extends object>(store: T): T {
-  return observable(store)
+  return observable(store);
 }

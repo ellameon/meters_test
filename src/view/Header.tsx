@@ -1,4 +1,4 @@
-import styles from "./index.module.scss"
+import styles from './index.module.scss';
 
 export const Header = () => {
   return (
@@ -11,5 +11,5 @@ export const Header = () => {
       <div>Адрес</div>
       <div>Примечание</div>
     </div>
-  )
-}
+  );
+};

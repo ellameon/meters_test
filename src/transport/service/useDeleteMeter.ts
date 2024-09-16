@@ -1,20 +1,16 @@
-import { useMutation } from "react-query";
-import { transport } from "../transport";
-
+import { useMutation } from 'react-query';
+import { transport } from '../transport';
 
 type Props = {
-  onSuccess: () => void
-}
-export const useDeleteMeter = (
-  {
-    onSuccess
-  }: Props) => {
-  const mutate = useMutation("delete", {
+  onSuccess: () => void;
+};
+export const useDeleteMeter = ({ onSuccess }: Props) => {
+  const mutate = useMutation('delete', {
     mutationFn: (id: string) => transport.delete(id),
-    onSuccess
-  })
+    onSuccess,
+  });
 
   return {
-    delete: mutate.mutate
-  }
-}
+    delete: mutate.mutate,
+  };
+};

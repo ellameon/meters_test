@@ -1,3 +1,3 @@
-export * from "./makeObservableStore"
-export * from "./MetersStore"
-export * from "./AddressStore"
+export * from './makeObservableStore';
+export * from './MetersStore';
+export * from './AddressStore';
