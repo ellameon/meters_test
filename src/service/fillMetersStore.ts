@@ -4,8 +4,8 @@ import { MetersStore } from "../store";
 
 let uniqueNumber = 0
 
-export const fillMetersStore = (data: MetersResponse) => {
-  const updatedList = addNumberToObjectsWithCounter(data.results, uniqueNumber)
+export const fillMetersStore = (data: MetersResponse, offset: number) => {
+  const updatedList = addNumberToObjectsWithCounter(data.results, offset)
 
   runInTransaction(() => {
     MetersStore.count = data.count
@@ -20,11 +20,11 @@ export const fillMetersStore = (data: MetersResponse) => {
 function addNumberToObjectsWithCounter(items: Meter[], currentCounter: number): { data: (Meter)[], updatedCounter: number } {
   const numberedItems = items.map((item, idx) => ({
     ...item,
-    number: currentCounter + idx + 1
+    number: currentCounter > 19 ? currentCounter - 20 + idx + 1 : currentCounter + idx + 1
   }));
 
   return {
     data: numberedItems,
-    updatedCounter: currentCounter + items.length
+    updatedCounter: currentCounter - items.length
   };
 }

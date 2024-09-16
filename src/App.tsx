@@ -20,7 +20,7 @@ function App() {
   }, [areasList])
 
   useEffect(() => {
-    metersList && fillMetersStore(metersList)
+    metersList && fillMetersStore(metersList, offset)
   }, [metersList])
 
   useEffect(() => {
