@@ -1,0 +1,169 @@
+.headerRow {
+  display: flex;
+  background-color: #F0F3F7;
+  height: 32px;
+  border-radius: 12px 12px 0 0;
+  border-bottom: 1px solid #E0E5EB;
+
+  div {
+    align-items: center;
+    display: flex;
+    padding-left: 12px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #697180;
+  }
+
+  :nth-of-type(1) {
+    width: 48px;
+  }
+
+  :nth-of-type(2) {
+    width: 120px;
+  }
+
+  :nth-of-type(3) {
+    width: 160px;
+  }
+
+  :nth-of-type(4) {
+    width: 128px;
+  }
+
+  :nth-of-type(5) {
+    width: 146px;
+  }
+
+  :nth-of-type(6) {
+    width: 430px;
+  }
+
+  :nth-of-type(7) {
+    width: 376px;
+  }
+}
+
+.row {
+  display: flex;
+  height: 52px;
+  border-bottom: 1px solid #E0E5EB;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+
+
+  &:hover {
+    background: #F7F8F9;
+  }
+
+  div {
+    align-items: center;
+    display: flex;
+    padding-left: 12px;
+
+  }
+
+  :nth-of-type(1) {
+    width: 48px;
+  }
+
+  :nth-of-type(2) {
+    width: 120px;
+  }
+
+  :nth-of-type(3) {
+    width: 160px;
+  }
+
+  :nth-of-type(4) {
+    width: 128px;
+  }
+
+  :nth-of-type(5) {
+    width: 146px;
+  }
+
+  :nth-of-type(6) {
+    width: 430px;
+  }
+
+  :nth-of-type(7) {
+    width: 376px;
+    display: flex;
+    justify-content: space-between;
+    color: #5E6674;
+  }
+}
+
+.tableClass {
+  border-radius: 12px;
+  border: 1px solid #E0E5EB;
+  width: 1408px;
+}
+
+.paginationButton {
+  height: 32px;
+  width: 32px;
+  border: 1px solid #CED5DE;
+  border-radius: 6px;
+  margin: 4px;
+}
+
+.content {
+  overflow: auto;
+  height: 864px;
+
+  :last-child {
+    border-bottom: 0;
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #adbbc4;
+    opacity: 0.5;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #F2F2F2;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  border-top: 1px solid #E0E5EB;
+  padding-right: 10px;
+  height: 48px;
+}
+
+.trash {
+  width: 16px !important;
+  height: 16px !important;
+  padding: 10px 12px 10px 12px;
+  border-radius: 8px;
+  background: #FEE3E3;
+  cursor: pointer;
+  margin-right: 20px;
+
+  svg {
+    path {
+      fill: #C53030;
+    }
+  }
+
+  :hover {
+    background: #FED7D7;
+
+    svg {
+      path {
+        fill: #9B2C2C;
+      }
+    }
+  }
+}
